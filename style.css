@@ -1,0 +1,101 @@
+:root {
+  --bg-color: #fffdf5;
+  --color: #3f3f5a;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Special Elite', cursive;
+}
+
+.container-page {
+  padding: 10%;
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  background-color: var(--bg-color);
+  color: var(--color);
+}
+
+.container-quote {
+  width: 100%;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative
+}
+
+.container-quote .qoute-content {
+  font-size: 2rem;
+  text-align: center;
+  position: relative;
+  width: 70%;
+  padding: 10px;
+}
+
+.container-quote .qoute-content::before {
+  content: '“';
+  opacity: 0.5;
+  font-size: 5rem;
+  position: absolute;
+  top: -40px;
+  left: 0;
+}
+
+.container-quote .qoute-content::after {
+  content: '”';
+  opacity: 0.5;
+  font-size: 5rem;
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+}
+
+.container-quote .quote-author {
+  margin: 1.3rem 0;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.container-quote .quote-tag {
+  position: absolute;
+  right: 0;
+  top: 0;
+  opacity: 0.7;
+  font-size: 1rem;
+}
+
+.container-quote .quote-tag::before,
+.container-quote .quote-author::before {
+  content: '-';
+}
+
+
+.container-quote .quote-tag::after,
+.container-quote .quote-author::after {
+  content: '-';
+}
+
+.button-generate-quote {
+  background-color: transparent;
+  border: none;
+  padding: 1rem;
+  color: var(--color);
+  opacity: 0.7;
+  cursor: pointer;
+  transition: opacity .3s ease-in-out, text-decoration .3s ease-in-out;
+  width: 190px;
+  margin: auto;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.button-generate-quote:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
